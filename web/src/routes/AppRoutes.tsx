@@ -18,7 +18,7 @@ function AppRoutes(){
                 </Route>
                 <Route path='/' element={<AuthBasePage />}>
                     <Route path="/login" element={<Login />}/>
-                    <Route path="/regiser" element={<Register />}/>
+                    <Route path="/register" element={<Register />}/>
                 </Route>
 
                 <Route path='/' element={<BasePage />}>
