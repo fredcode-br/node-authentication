@@ -38,12 +38,16 @@ export const useApi = () => ({
         }
     },
 
-    post: async (endpoint: string, body: object, token: string) => {
+    post: async (endpoint: string, body: object, token?: string) => {
         try {
+            const headers: Record<string, string> = {}; 
+            
+            if (token) {
+                headers['Authorization'] = `Bearer ${token}`;
+            }
+    
             const response = await api.post(endpoint, body, {
-                headers: {
-                    Authorization: `Bearer ${token}`
-                }
+                headers: headers
             });
             return response.data;
         } catch (error) {
@@ -51,4 +55,6 @@ export const useApi = () => ({
             throw error;
         }
     }
+    
+    
 });

@@ -44,11 +44,11 @@ export const AuthProvider = ({ children }: Props) => {
           const errorMessage = axiosError.response.data;
           setError(String(errorMessage));
         } else {
-          setError('Ocorreu um erro ao fazer login. Por favor, tente novamente.');
+          setError('An error occurred while logging in. Please try again.');
         }
       } else {
-        console.error('Erro desconhecido:', error);
-        setError('Ocorreu um erro desconhecido ao fazer login. Por favor, tente novamente.');
+        console.error('Unknown error:', error);
+        setError('An unknown error occurred while logging in. Please try again.');
       }
     }
   }

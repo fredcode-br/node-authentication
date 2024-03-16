@@ -23,8 +23,8 @@ function Login() {
         await signIn({ email, password });
     }
 
-    function handleChange(e: React.ChangeEvent<HTMLInputElement>, id: string) {
-        if (id === "email") {
+    function handleChange(e: React.ChangeEvent<HTMLInputElement>, name: string) {
+        if (name === "email") {
             setEmail(e.target.value);
         } else {
             setPassword(e.target.value);
