@@ -24,7 +24,7 @@ function SideBar({expanded}: Props) {
     <div
       className={`${
         expanded ? "w-full" : "w-0 p-0"
-      } pt-10 md:pt-4 md:w-64 flex-shrink-0 bg-zinc-900 p-4 transition-all duration-300 overflow-hidden`}
+      } pt-10 md:pt-4 md:w-64 flex-shrink-0 bg-zinc-900 md:p-4 transition-all duration-300 overflow-hidden`}
     >
 
       <div className="flex items-center justify-center h-16 text-white px-6">
@@ -37,9 +37,16 @@ function SideBar({expanded}: Props) {
       </div>
       <nav className="flex-1 mt-5 px-2">
         <SideLink 
+          text="Home"
+          to=""
+          iconName="home"
+          activeLink={activeLink}
+          setActiveLink={handleSetActiveLink}
+        />
+        <SideLink 
           text="Dashboard"
           to="dashboard"
-          iconName="home"
+          iconName="dashboard"
           activeLink={activeLink}
           setActiveLink={handleSetActiveLink}
         />

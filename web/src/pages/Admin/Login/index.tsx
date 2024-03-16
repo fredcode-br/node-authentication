@@ -14,7 +14,7 @@ function Login() {
     
     useEffect(() => {
         if (signed) {
-            navigate("/");
+            navigate("/dashboard");
         }
     }, [signed, navigate]);
 

@@ -15,13 +15,9 @@ function Footer() {
             <NavLink to="/" className="block py-2 px-3 text-white md:p-0 hover:text-green-400">
               Home
             </NavLink>
-
-            <NavLink to="/" className="block py-2 px-3 text-white md:p-0 hover:text-green-400">
-              Location
-            </NavLink>
-
-            <NavLink to="/" className="block py-2 px-3 text-white md:p-0 hover:text-green-400">
-              Contact
+          
+            <NavLink to="/dashboard" className="block py-2 px-3 text-white md:p-0 hover:text-green-400">
+              Dashboard
             </NavLink>
 
           </ul>

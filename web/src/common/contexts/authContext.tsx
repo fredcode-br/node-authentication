@@ -55,6 +55,8 @@ export const AuthProvider = ({ children }: Props) => {
 
   function signOut() {
     setUser(null);
+    sessionStorage.removeItem("@App:user");
+    sessionStorage.removeItem("@App:token");
   }
 
   return (

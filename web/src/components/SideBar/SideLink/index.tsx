@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { HomeIcon } from "@heroicons/react/24/outline";
+import { HomeIcon, Squares2X2Icon } from "@heroicons/react/24/outline";
 
 interface Props {
     text: string;
@@ -14,6 +14,8 @@ function SideLink({text, to, iconName, activeLink, setActiveLink}: Props) {
         switch (iconName) {
             case "home":
                 return <HomeIcon className="h-6 w-6 mr-3" />;
+            case "dashboard":
+                    return <Squares2X2Icon className="h-6 w-6 mr-3" />;
             default:
                 return null;
         }

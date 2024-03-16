@@ -33,7 +33,7 @@ function Register() {
 
         try {
             await post('/user', { name, email, password });
-            navigate("/");
+            navigate("/login");
         } catch (error) {
             if (axios.isAxiosError(error)) {
                 const axiosError = error as AxiosError;
