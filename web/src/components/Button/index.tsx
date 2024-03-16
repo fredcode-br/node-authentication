@@ -2,14 +2,13 @@ interface Props {
     children: React.ReactNode;
     type: "button" | "submit";
     customClass?: string;
-    handleClick?: () => void;
+    handleClick?: (e: React.MouseEvent<HTMLButtonElement>) => void;
 }
 
 function Button({children, type, customClass, handleClick}: Props){
     const handlingClick = (e: React.MouseEvent<HTMLButtonElement>) => {
-        e.preventDefault();
         if (handleClick) {
-            handleClick();
+            handleClick(e);
         }
     }
     
