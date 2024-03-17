@@ -1,4 +1,10 @@
-# Logs
+# Ignore node_modules in any directory
+node_modules
+
+# Ignore .env file in any directory
+.env
+
+# Ignore logs
 logs
 *.log
 npm-debug.log*
@@ -7,12 +13,7 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
-node_modules
-dist
-dist-ssr
-*.local
-
-# Editor directories and files
+# Ignore editor directories and files
 .vscode/*
 !.vscode/extensions.json
 .idea
@@ -22,5 +23,3 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
-
-.env
