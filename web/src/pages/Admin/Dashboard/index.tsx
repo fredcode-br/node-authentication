@@ -5,9 +5,7 @@ import { AuthContext } from "../../../common/contexts/authContext";
 function Dashboard() {
     const { signOut } = useContext(AuthContext);
 
-
     async function logout(e: React.MouseEvent<HTMLElement>) {
-        console.log("Here")
         e.preventDefault();
         await signOut();
     }

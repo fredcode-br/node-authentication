@@ -28,7 +28,7 @@ export const AuthProvider = ({ children }: Props) => {
     if (storagedToken && storagedUser) {
       setUser(JSON.parse(storagedUser));
     }
-  }, []);
+  }, [setUser]);
 
   async function signIn(userData: object) {
     try {
